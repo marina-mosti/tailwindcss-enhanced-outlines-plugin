@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-enhanced-outlines-plugin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "TailwindCSS plugin that enhances outline classes",
   "main": "index.js",
   "scripts": {
