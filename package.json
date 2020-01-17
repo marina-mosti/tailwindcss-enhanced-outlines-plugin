@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-enhanced-outlines-plugin",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "TailwindCSS plugin that enhances outline classes",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,9 @@
     "tailwindcss",
     "plugin",
     "transitions",
-    "outline"
+    "outline",
+    "accessibility",
+    "a11y"
   ],
   "author": "Marina Mosti",
   "license": "ISC",

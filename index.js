@@ -23,19 +23,29 @@ module.exports = function ({ addUtilities, theme, variants }) {
 
   const colors = flattenObject(theme('outlineColor', {}), '', '-');
 
+  const offsets = theme('outlineOffset', {
+    '0': '0',
+    '1': '1px',
+    '2': '2px',
+    '4': '4px'
+  });
+
   const utils = {};
   const prefix = '.outline';
 
-  if (widths['default'] || styles['default'] || colors['default']) {
-    utils['.outline'] = {};
+  if (widths['default'] || styles['default'] || colors['default'] || offsets['default']) {
+    utils[prefix] = {};
     if (widths['default']) {
-      utils['.outline']['outline-width'] = widths['default'];
+      utils[prefix]['outline-width'] = widths['default'];
     }
     if (styles['default']) {
-      utils['.outline']['outline-style'] = styles['default'];
+      utils[prefix]['outline-style'] = styles['default'];
     }
     if (colors['default']) {
-      utils['.outline']['outline-color'] = colors['default'];
+      utils[prefix]['outline-color'] = colors['default'];
+    }
+    if (offsets['default']) {
+      utils[prefix]['outline-offset'] = offsets['default'];
     }
   }
 
@@ -54,6 +64,12 @@ module.exports = function ({ addUtilities, theme, variants }) {
   for (let color in colors) {
     utils[`${prefix}-${color}`] = {
       'outline-color': colors[color]
+    };
+  }
+
+  for (let offset in offsets) {
+    utils[`${prefix}-offset-${offset}`] = {
+      'outline-offset': offsets[offset]
     };
   }
 
