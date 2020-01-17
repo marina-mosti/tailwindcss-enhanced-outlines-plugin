@@ -27,15 +27,15 @@ module.exports = function ({ addUtilities, theme, variants }) {
   const prefix = '.outline';
 
   if (widths['default'] || styles['default'] || colors['default']) {
-    utils['.outline'] = {};
+    utils[prefix] = {};
     if (widths['default']) {
-      utils['.outline']['outline-width'] = widths['default'];
+      utils[prefix]['outline-width'] = widths['default'];
     }
     if (styles['default']) {
-      utils['.outline']['outline-style'] = styles['default'];
+      utils[prefix]['outline-style'] = styles['default'];
     }
     if (colors['default']) {
-      utils['.outline']['outline-color'] = colors['default'];
+      utils[prefix]['outline-color'] = colors['default'];
     }
   }
 
