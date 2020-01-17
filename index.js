@@ -33,7 +33,7 @@ module.exports = function ({ addUtilities, theme, variants }) {
   const utils = {};
   const prefix = '.outline';
 
-  if (widths['default'] || styles['default'] || colors['default']) {
+  if (widths['default'] || styles['default'] || colors['default'] || offsets['default']) {
     utils[prefix] = {};
     if (widths['default']) {
       utils[prefix]['outline-width'] = widths['default'];
