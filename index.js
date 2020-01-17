@@ -23,6 +23,13 @@ module.exports = function ({ addUtilities, theme, variants }) {
 
   const colors = flattenObject(theme('outlineColor', {}), '', '-');
 
+  const offsets = theme('outlineOffset', {
+    '0': '0',
+    '1': '1px',
+    '2': '2px',
+    '4': '4px'
+  });
+
   const utils = {};
   const prefix = '.outline';
 
@@ -36,6 +43,9 @@ module.exports = function ({ addUtilities, theme, variants }) {
     }
     if (colors['default']) {
       utils[prefix]['outline-color'] = colors['default'];
+    }
+    if (offsets['default']) {
+      utils[prefix]['outline-offset'] = offsets['default'];
     }
   }
 
@@ -54,6 +64,12 @@ module.exports = function ({ addUtilities, theme, variants }) {
   for (let color in colors) {
     utils[`${prefix}-${color}`] = {
       'outline-color': colors[color]
+    };
+  }
+
+  for (let offset in offsets) {
+    utils[`${prefix}-offset-${offset}`] = {
+      'outline-offset': offsets[offset]
     };
   }
 
