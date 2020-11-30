@@ -1,10 +1,11 @@
-# Tailwind CSS Enhanced Outlines Plugin
+# Tailwind CSS Enhanced Outlines Plugin (for Tailwind 2.x)
 
 This plugin adds some more outline classes to Tailwind CSS.
-Ability to target colors with `outline-{color}` ex. `outline-red`
-Ability to target width with `outline-{width}` ex. `outline-2`
-Ability to target style with `outline-{style}` ex. `outline-solid`
-Ability to target offset with `outline-offset-{offset}` ex. `outline-offset-2`
+
+- Ability to target colors with `outline-{color}` ex. `outline-red`
+- Ability to target width with `outline-{width}` ex. `outline-2`
+- Ability to target style with `outline-{style}` ex. `outline-solid`
+- Ability to target offset with `outline-offset-{offset}` ex. `outline-offset-2`
 
 ## Installation
 
